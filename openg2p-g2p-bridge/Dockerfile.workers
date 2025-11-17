@@ -9,6 +9,8 @@ WORKDIR /app
 
 # Dynamic adapters from workflow (optional; e.g., bank/geo/notification connectors)
 COPY adapters.requirements.txt /tmp/adapters.requirements.txt
+# TODO: Fix dep issue and move the below  
+RUN pip install --disable-pip-version-check "git+https://github.com/OpenG2P/openg2p-spar@${G2P_REF}#subdirectory=openg2p-spar-models" 
 RUN if [ -s /tmp/adapters.requirements.txt ]; then pip install --no-cache-dir -r /tmp/adapters.requirements.txt; fi
 
 # Install all Python packages in one layer for better caching and speed
@@ -20,7 +22,7 @@ RUN pip install --upgrade pip setuptools && \
         "git+https://github.com/openg2p/openg2p-fastapi-common@v1.1.4#subdirectory=openg2p-fastapi-auth" \
         "git+https://github.com/openg2p/openg2p-fastapi-common@v1.1.4#subdirectory=openg2p-fastapi-partner-auth" \
         "git+https://github.com/OpenG2P/openg2p-g2p-bridge@${G2P_REF}#subdirectory=openg2p-g2p-bridge-models" \
-        "git+https://github.com/OpenG2P/openg2p-g2p-bridge@${G2P_REF}#subdirectory=openg2p-g2p-bridge-celery-workers"
+        "git+https://github.com/OpenG2P/openg2p-g2p-bridge@${G2P_REF}#subdirectory=openg2p-g2p-bridge-celery-workers" \
 
 RUN apk del --no-network .build-deps
 
