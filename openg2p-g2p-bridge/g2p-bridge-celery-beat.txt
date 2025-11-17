@@ -1,5 +1,5 @@
 # g2p-bridge-celery-beat.txt
-#!openg2p/openg2p-g2p-bridge-celery-beat-producers:2.0.0
+#!psnappz/openg2p-g2p-bridge-celery-beat-producers:2.0.1
 #!openg2p-g2p-bridge/Dockerfile.producers
 #!.
 git+https://github.com/openg2p/openg2p-g2p-bridge-adapters@v2.0.0#subdirectory=openg2p-g2p-bridge-bank-connectors
