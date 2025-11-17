@@ -24,7 +24,7 @@ RUN pip install --upgrade pip setuptools && \
         "git+https://github.com/openg2p/openg2p-fastapi-common@v1.1.4#subdirectory=openg2p-fastapi-auth" \
         "git+https://github.com/openg2p/openg2p-fastapi-common@v1.1.4#subdirectory=openg2p-fastapi-partner-auth" \
         "git+https://github.com/OpenG2P/openg2p-g2p-bridge@${G2P_REF}#subdirectory=openg2p-g2p-bridge-models" \
-        "git+https://github.com/OpenG2P/openg2p-g2p-bridge@${G2P_REF}#subdirectory=openg2p-g2p-bridge-celery-workers" \
+        "git+https://github.com/OpenG2P/openg2p-g2p-bridge@${G2P_REF}#subdirectory=openg2p-g2p-bridge-celery-workers"
 
 RUN apk del --no-network .build-deps
 
