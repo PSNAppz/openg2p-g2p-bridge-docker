@@ -7,10 +7,12 @@ RUN apk add --no-cache --virtual .build-deps gcc libc-dev linux-headers make \
 
 WORKDIR /app
 
+# TODO: Fix dep issue and move the below  
+RUN pip install "git+https://github.com/OpenG2P/openg2p-spar@${G2P_REF}#subdirectory=openg2p-spar-models" 
+
 # Dynamic adapters from workflow (optional; e.g., bank/geo/notification connectors)
 COPY adapters.requirements.txt /tmp/adapters.requirements.txt
-# TODO: Fix dep issue and move the below  
-RUN pip install --disable-pip-version-check "git+https://github.com/OpenG2P/openg2p-spar@${G2P_REF}#subdirectory=openg2p-spar-models" 
+
 RUN if [ -s /tmp/adapters.requirements.txt ]; then pip install --no-cache-dir -r /tmp/adapters.requirements.txt; fi
 
 # Install all Python packages in one layer for better caching and speed
