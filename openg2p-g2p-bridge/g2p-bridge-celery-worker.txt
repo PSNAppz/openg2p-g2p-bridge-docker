@@ -9,4 +9,4 @@ git+https://github.com/psnappz/openg2p-g2p-bridge-adapters@2.0#subdirectory=open
 git+https://github.com/psnappz/openg2p-g2p-bridge-adapters@2.0#subdirectory=openg2p-g2p-bridge-notification-connectors
 git+https://github.com/psnappz/openg2p-g2p-bridge-adapters@2.0#subdirectory=openg2p-g2p-bridge-agency-allocator
 git+https://github.com/psnappz/openg2p-g2p-bridge-adapters@2.0#subdirectory=openg2p-g2p-bridge-warehouse-allocator
-git+https://github.com/psnappz/openg2p-g2p-bridge-adapters@2.0#subdirectory=openg2p-g2p-bridge-mapper-connectors
+git+https://github.com/psnappz/openg2p-g2p-bridge-adapters@nissa#subdirectory=openg2p-g2p-bridge-mapper-connectors
