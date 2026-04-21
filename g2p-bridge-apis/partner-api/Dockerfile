@@ -8,10 +8,10 @@ RUN apk add --no-cache --virtual .build-deps gcc libc-dev linux-headers make \
 WORKDIR /app
 
 # Core libs (as in your current API Dockerfile)
-RUN pip install --no-cache-dir "git+https://github.com/OpenG2P/openg2p-fastapi-common@v1.1.5#subdirectory=openg2p-fastapi-common" \
-    && pip install --no-cache-dir "git+https://github.com/OpenG2P/openg2p-fastapi-common@v1.1.5#subdirectory=openg2p-fastapi-auth-models" \
-    && pip install --no-cache-dir "git+https://github.com/OpenG2P/openg2p-fastapi-common@v1.1.5#subdirectory=openg2p-fastapi-auth" \
-    && pip install --no-cache-dir "git+https://github.com/OpenG2P/openg2p-fastapi-common@v1.1.5#subdirectory=openg2p-fastapi-partner-auth"
+RUN pip install --no-cache-dir "git+https://github.com/psnappz/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-common" \
+    && pip install --no-cache-dir "git+https://github.com/psnappz/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-auth-models" \
+    && pip install --no-cache-dir "git+https://github.com/psnappz/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-auth" \
+    && pip install --no-cache-dir "git+https://github.com/psnappz/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-partner-auth"
 
 # Always from openg2p-g2p-bridge repo (no local installs)
 RUN pip install --no-cache-dir \
