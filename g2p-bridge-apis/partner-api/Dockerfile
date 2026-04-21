@@ -9,9 +9,9 @@ WORKDIR /app
 
 # Core libs (as in your current API Dockerfile)
 RUN pip install --no-cache-dir "git+https://github.com/psnappz/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-common" \
-    && pip install --no-cache-dir "git+https://github.com/psnappz/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-auth-models" \
-    && pip install --no-cache-dir "git+https://github.com/psnappz/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-auth" \
-    && pip install --no-cache-dir "git+https://github.com/psnappz/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-partner-auth"
+    && pip install --no-cache-dir "git+https://github.com/openg2p/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-auth-models" \
+    && pip install --no-cache-dir "git+https://github.com/openg2p/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-auth" \
+    && pip install --no-cache-dir "git+https://github.com/openg2p/openg2p-fastapi-common@1.1#subdirectory=openg2p-fastapi-partner-auth"
 
 # Always from openg2p-g2p-bridge repo (no local installs)
 RUN pip install --no-cache-dir \
